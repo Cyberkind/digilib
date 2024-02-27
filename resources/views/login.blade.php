@@ -43,30 +43,20 @@
       <div class="col-sm-4"> </div>
       <div class="col-md-4">
 
-        <h1 class="text-center text-primary">✮ LOGIN ✮</h1>
-        <br />
-
-        <div class="col-sm-12">
-
-          <ul class="nav nav-pills">
-
-
-
-            <li class="" style="width:100%"><a class="btn btn-lg btn-default" data-toggle="tab" href="#home">Admin
-                Login</a></li>
-
-            
-
-          </ul>
-
-          <br />
+        <h1 class="text-center text-primary">LOGIN</h1>
+       @if (session('alert'))
+            <div class="alert alert-success" role="alert">
+              {{session('pesan')}}
+            </div>
+           
+       @endif
+         
 
 
-          <div class="tab-content">
-            <div id="home" class="tab-pane fade in active">
+         
 
-              <form action="#">
-
+              <form action="" method="POST" class="mt-5">
+@csrf
                 <div class="form-group">
                   <input type="text" name="username" class="form-control" id="username" placeholder="Username">
                 </div>

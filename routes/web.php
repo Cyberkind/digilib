@@ -27,7 +27,7 @@ Route::get('reg', function () {
 
 Route::prefix('admin')->group(function(){
     Route::get('login',[adminController::class,'log']);
-    Route::post('reg',[adminController::class,'reg']);
+    Route::post('login',[adminController::class,'reg']);
     Route::get('home',[adminController::class,'home']);
 
 });
