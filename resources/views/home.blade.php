@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Navigation Bar with Search Box</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="/asset/css/bootstrap.min.css">
     <!-- Unicons CSS -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
@@ -20,10 +20,10 @@
   font-family: "Poppins", sans-serif;
 }
 body {
- background-image: url('https://i0.wp.com/lib.ub.ac.id/wp-content/uploads/2022/11/Sumber-Gurusiana.jpg?fit=670%2C450&ssl=1');
- background-attachment: fixed;
+ /* background-image: url('https://i0.wp.com/lib.ub.ac.id/wp-content/uploads/2022/11/Sumber-Gurusiana.jpg?fit=670%2C450&ssl=1'); */
+ /* background-attachment: fixed;
  background-repeat: no-repeat;
- background-size: 100% 100%;
+ background-size: 100% 100%; */
 }
 .nav {
   position: fixed;
@@ -171,27 +171,56 @@ a {
    </style>
   </head>
   <body>
-    <nav class="nav">
-      <i class="uil uil-bars navOpenBtn"></i>
-      <a href="#" class="logo">My Library</a>
-
-      <ul class="nav-links">
-        <i class="uil uil-times navCloseBtn"></i>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Buku</a></li>
-        <li><a href="#">Kategori</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Contact Us</a></li>
-      </ul>
-
-      <i class="uil uil-search search-icon" id="searchIcon"></i>
-      <div class="search-box">
-        <i class="uil uil-search search-icon"></i>
-        <input type="text" placeholder="Search here..." />
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+          <div class="carousel-item active">
+              <img src="https://www.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/a249096c7812deb8c3c2c907173f3774.jpe" class="d-block w-5 m-auto pt-5 " alt="...">
+          </div>
+          <div class="carousel-item">
+              <img src="https://www.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/88fbe563405097ee6eeeccd9d46195e2.jpe" class="d-block w-5 m-auto pt-lg-5" alt="...">
+          </div>
+          <div class="carousel-item">
+              <img src="https://jojo-news.com/wp-content/uploads/2020/07/JJBA-Watch-Order-1024x576.png" class="d-block w-5 m-auto" alt="...">
+          </div>
       </div>
-    </nav>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+      </button>
+  </div>
+  <div>
+   <header>
+    <div>
+      <nav class="nav">
+        <i class="uil uil-bars navOpenBtn"></i>
+        <a href="#" class="logo">My Library</a>
+  
+        <ul class="nav-links">
+          <i class="uil uil-times navCloseBtn"></i>
+          <li><a href="home">Home</a></li>
+          <li><a href="#">Buku</a></li>
+          <li><a href="#">Kategori</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+  
+        <i class="uil uil-search search-icon" id="searchIcon"></i>
+        <div class="search-box">
+          <i class="uil uil-search search-icon"></i>
+          <input type="text" placeholder="Search here..." />
+        </div>
+      </nav>
+  
+   </header>
+ 
     {{-- carosel --}}
-    
+  
     {{-- end carosel --}}
   </body>
   <script>
@@ -217,5 +246,7 @@ navOpenBtn.addEventListener("click", () => {
 navCloseBtn.addEventListener("click", () => {
   nav.classList.remove("openNav");
 });
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
   </script>
 </html>
