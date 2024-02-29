@@ -1,332 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Registrasi</title>
+
+    <link rel="stylesheet" href="/asset/css/bootstrap.min.css">
+
 </head>
-<style>
-    @import url('https://fonts.googleapis.com/css?family=Poppins');
 
-/* BASIC */
-
-html {
-    background-image: url('https://static.promediateknologi.id/crop/0x0:720x544/0x0/webp/photo/p2/34/2023/08/28/Screenshot_20230828-123405_Drive-2732534987.jpg');
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
-
-body {
-  font-family: "Poppins", sans-serif;
-  height: 100vh;
-}
-
-a {
-  color: #92badd;
-  display:inline-block;
-  text-decoration: none;
-  font-weight: 400;
-}
-
-h2 {
-  text-align: center;
-  font-size: 16px;
-  font-weight: 600;
-  text-transform: uppercase;
-  display:inline-block;
-  margin: 40px 8px 10px 8px; 
-  color: #cccccc;
-}
-
-
-
-/* STRUCTURE */
-
-.wrapper {
-  display: flex;
-  align-items: center;
-  flex-direction: column; 
-  justify-content: center;
-  width: 100%;
-  min-height: 100%;
-  padding: 20px;
-}
-
-#formContent {
-  -webkit-border-radius: 10px 10px 10px 10px;
-  border-radius: 10px 10px 10px 10px;
-  background: #ffffff58;
-  padding: 30px;
-  width: 90%;
-  max-width: 450px;
-  position: relative;
-  padding: 0px;
-  -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
-  box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
-  text-align: center;
-}
-
-#formFooter {
-  background-color: #f6f6f6;
-  border-top: 1px solid #dce8f1;
-  padding: 25px;
-  text-align: center;
-  -webkit-border-radius: 0 0 10px 10px;
-  border-radius: 0 0 10px 10px;
-}
-
-
-
-/* TABS */
-
-h2.inactive {
-  color: #ffffff58;
-}
-
-h2.active {
-  color: #0d0d0d;
-  border-bottom: 2px solid #5fbae9;
-}
-
-
-
-/* FORM TYPOGRAPHY*/
-
-input[type=button], input[type=submit], input[type=reset]  {
-  background-color: #56baed;
-  border: none;
-  color: ffffff58;
-  padding: 15px 80px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  text-transform: uppercase;
-  font-size: 13px;
-  -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
-  box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
-  -webkit-border-radius: 5px 5px 5px 5px;
-  border-radius: 5px 5px 5px 5px;
-  margin: 5px 20px 40px 20px;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
-  background-color: #39ace7;
-}
-
-input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
-  -moz-transform: scale(0.95);
-  -webkit-transform: scale(0.95);
-  -o-transform: scale(0.95);
-  -ms-transform: scale(0.95);
-  transform: scale(0.95);
-}
-
-input[type=text] {
-  background-color: #ffffff58;
-  border: none;
-  color: #0d0d0d;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 5px;
-  width: 85%;
-  border: 2px solid #ffffff58;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-  -webkit-border-radius: 5px 5px 5px 5px;
-  border-radius: 5px 5px 5px 5px;
-}
-input[type=password] {
-  background-color: #ffffff58;
-  border: none;
-  color: #0d0d0d;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 5px;
-  width: 85%;
-  border: 2px solid #ffffff58;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-  -webkit-border-radius: 5px 5px 5px 5px;
-  border-radius: 5px 5px 5px 5px;
-}
-
-input[type=text]:focus {
-  background-color: #fff;
-  border-bottom: 2px solid #5fbae9;
-}
-input[type=password]:focus {
-  background-color: #fff;
-  border-bottom: 2px solid #5fbae9;
-}
-
-input[type=text]:placeholder {
-  color: #cccccc;
-}
-
-
-
-/* ANIMATIONS */
-
-/* Simple CSS3 Fade-in-down Animation */
-.fadeInDown {
-  -webkit-animation-name: fadeInDown;
-  animation-name: fadeInDown;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-@-webkit-keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-}
-
-@keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-}
-
-/* Simple CSS3 Fade-in Animation */
-@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-
-.fadeIn {
-  opacity:0;
-  -webkit-animation:fadeIn ease-in 1;
-  -moz-animation:fadeIn ease-in 1;
-  animation:fadeIn ease-in 1;
-
-  -webkit-animation-fill-mode:forwards;
-  -moz-animation-fill-mode:forwards;
-  animation-fill-mode:forwards;
-
-  -webkit-animation-duration:1s;
-  -moz-animation-duration:1s;
-  animation-duration:1s;
-}
-
-.fadeIn.first {
-  -webkit-animation-delay: 0.4s;
-  -moz-animation-delay: 0.4s;
-  animation-delay: 0.4s;
-}
-
-.fadeIn.second {
-  -webkit-animation-delay: 0.6s;
-  -moz-animation-delay: 0.6s;
-  animation-delay: 0.6s;
-}
-
-.fadeIn.third {
-  -webkit-animation-delay: 0.8s;
-  -moz-animation-delay: 0.8s;
-  animation-delay: 0.8s;
-}
-
-.fadeIn.fourth {
-  -webkit-animation-delay: 1s;
-  -moz-animation-delay: 1s;
-  animation-delay: 1s;
-}
-
-/* Simple CSS3 Fade-in Animation */
-.underlineHover:after {
-  display: block;
-  left: 0;
-  bottom: -10px;
-  width: 0;
-  height: 2px;
-  background-color: #56baed;
-  content: "";
-  transition: width 0.2s;
-}
-
-.underlineHover:hover {
-  color: #0d0d0d;
-}
-
-.underlineHover:hover:after{
-  width: 100%;
-}
-
-
-
-/* OTHERS */
-
-*:focus {
-    outline: none;
-} 
-
-#icon {
-  width:60%;
-}
-
-* {
-  box-sizing: border-box;
-}
-</style>
 <body>
-    <div class="wrapper fadeInDown">
-        <div id="formContent">
-          <!-- Tabs Titles -->
-          <h2 class="active"> Sign Up </h2>
-          
-      
-          {{-- <!-- Icon -->
-          <div class="fadeIn first">
-            <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
-          </div> --}}
-      
-          <!-- Login Form -->
-          <form>
-            <input type="text" id="logup" class="fadeIn second" name="logup" placeholder="Masukkan Nama">
-            <input type="text" id="mail" class="fadeIn third" name="mail" placeholder="Email">
-            <input type="text" id="uname" class="fadeIn third" name="uname" placeholder="Username">
-            <input type="password" id="uname" class="fadeIn third" name="pwd" placeholder="Password">
-            
-            <input type="submit" class="fadeIn fourth" value="Sign Up">
-          </form>
-      
-          
-      
+    <div id="main" class="d-flax align-items-center vh-100">
+        <div class="container">
+            <div class="card shadow m-auto" style="width: 400px">
+                <div class="card-body">
+                    <h4 class="h4">Daftarkan Diri Anda</h4>
+                    @if (session('Pesan'))
+                        <div class="alert alert-success" role="alert">
+
+                            {{ session('Pesan') }}
+                        </div>
+                    @endif
+                    @if ($errors->any())
+                        <div class="alert alert-success" role="alert">
+
+                            gagal coy
+                        </div>
+                    @endif
+
+                    <form action="{{ url('Simpan') }}" method="POST">
+                        @csrf
+                        <div class="mb-3">
+
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="EMAIL">
+
+                            @error('email')
+                                <div class="form-text">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+
+                            <label for="nama" class="form-label">Nama</label>
+                            <input type="text" class="form-control" name="nama" id="nama"
+                                placeholder="Nama Lengkap">
+
+                            @error('nama')
+                                <div class="form-text">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" class="form-control" name="username" id="username"
+                                placeholder="Username">
+
+                            @error('username')
+                                <div class="form-text">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" name="password" id="password"
+                                placeholder="Password">
+
+                            @error('password')
+                                <div class="form-text">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+
+                            <label for="status" class="form-label">Status</label>
+                                <select name="form-select" class="form-control" aria-label="Default select example" name="status" id="status">
+                                  <option value="1">Admin</option>
+                                <option value="2">Petugas</option>
+                                </select>
+                                @error('status')
+                                <div class="form-text">
+                                  {{ $message }}
+                              </div
+                                @enderror
+
+                        </div>
+                        <button class="btn form-control btn-primary mb-2">Registrasi</button>
+                        <button class="btn form-control btn-outline-success mb-2">Batal</button>
+                    </form>
+                </div>
+            </div>
         </div>
-      </div>
+    </div>
 </body>
+
 </html>
