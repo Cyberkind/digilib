@@ -22,13 +22,15 @@ Route::get('/', function () {
 // Route::get('kate', function () {
 //     return view('kategori');
 // });
-Route::get('reg', function () {
-    return view('reg');
-});
+// Route::get('reg', function () {
+//     return view('reg');
+// });
 
 Route::prefix('admin')->group(function(){
     Route::get('login',[adminController::class,'log']);
     Route::get('reg',[adminController::class,'reg']);
+    Route::post('reg/simpan',[adminController::class,'simpan']);
+   
     Route::post('login',[adminController::class,'ceklogin']);
     Route::get('home',[adminController::class,'home']);
     

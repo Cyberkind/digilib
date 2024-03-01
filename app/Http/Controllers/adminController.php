@@ -9,14 +9,31 @@ class adminController extends Controller
 {
 
     public function reg(){
-        
+        return view("admin.reg");
+    }
+    public function simpan(Request $request){
+      
+        $cek=$request->validate([
+            'email'=>'required',
+            'username'=>'required|min:6',
+            'password'=>'required|min:4',
+            'namalengkap'=>'required',
+        ]);
+        $a = new admin();
+        $a->create([
+            'email'=>$request->email,
+            'username'=>$request->username,
+            'password'=>$request->password,
+            'namalengkap'=>$request->namalengkap
+        ]);
+        return redirect('admin/reg')->with('info','anda berhasil login');
     }
 
     public function home(){
-return view("home");
+return view("admin/home");
     }
     public function log(){
-        return view("login");
+        return view("admin/login");
     }
     public function ceklogin(Request $request){
         $s = new admin();

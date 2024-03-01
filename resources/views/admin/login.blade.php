@@ -65,7 +65,7 @@
                   <input type="password" name="password" class="form-control" id="password" placeholder="Password">
                 </div>
                 <div class="text-center">
-                  <p>Not a member? <a href="#!">Register</a></p>
+                  <p>Not a member? <a href="reg">Register</a></p>
               </div>
 
                 <button class="pull-right btn btn-block btn-danger">login</button>

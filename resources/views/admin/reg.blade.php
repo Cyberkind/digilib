@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    <form action="{{url('admin/reg/simpan')}}" method="POST">
     <div id="main" class="d-flax align-items-center vh-100">
         <div class="container">
             <div class="card shadow m-auto" style="width: 400px">
@@ -43,15 +44,7 @@
                                 </div>
                             @enderror
 
-                            <label for="nama" class="form-label">Nama</label>
-                            <input type="text" class="form-control" name="nama" id="nama"
-                                placeholder="Nama Lengkap">
-
-                            @error('nama')
-                                <div class="form-text">
-                                    {{ $message }}
-                                </div>
-                            @enderror
+                           
 
                             <label for="username" class="form-label">Username</label>
                             <input type="text" class="form-control" name="username" id="username"
@@ -72,11 +65,19 @@
                                     {{ $message }}
                                 </div>
                             @enderror
+                            <label for="nama" class="form-label">Nama</label>
+                            <input type="text" class="form-control" name="namalengkap" id="namalengkap"
+                                placeholder="Nama Lengkap">
 
+                            @error('nama')
+                                <div class="form-text">
+                                    {{ $message }}
+                                </div>
+                            @enderror
                             <label for="status" class="form-label">Status</label>
                                 <select name="form-select" class="form-control" aria-label="Default select example" name="status" id="status">
-                                  <option value="1">Admin</option>
-                                <option value="2">Petugas</option>
+                                  <option value="admin">Admin</option>
+                                <option value="petugas">Petugas</option>
                                 </select>
                                 @error('status')
                                 <div class="form-text">
