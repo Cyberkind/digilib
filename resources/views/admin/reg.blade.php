@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <form action="{{url('admin/reg/simpan')}}" method="POST">
+    <form action="{{url('admin/reg')}}" method="post">
     <div id="main" class="d-flax align-items-center vh-100">
         <div class="container">
             <div class="card shadow m-auto" style="width: 400px">
@@ -20,18 +20,17 @@
                     <h4 class="h4">Daftarkan Diri Anda</h4>
                     @if (session('Pesan'))
                         <div class="alert alert-success" role="alert">
-
+                          
                             {{ session('Pesan') }}
                         </div>
                     @endif
                     @if ($errors->any())
-                        <div class="alert alert-success" role="alert">
-
-                            gagal coy
+                        <div class="alert alert-danger" role="alert">
+                            Register Gagal
                         </div>
                     @endif
 
-                    <form action="{{ url('Simpan') }}" method="POST">
+                    <form action="{{ url('Simpan') }}" method="get">
                         @csrf
                         <div class="mb-3">
 
@@ -75,9 +74,9 @@
                                 </div>
                             @enderror
                             <label for="status" class="form-label">Status</label>
-                                <select name="form-select" class="form-control" aria-label="Default select example" name="status" id="status">
-                                  <option value="admin">Admin</option>
-                                <option value="petugas">Petugas</option>
+                                <select class="form-select" class="form-control" aria-label="Default select example" name="status" id="status">
+                                  <option value="1">Admin</option>
+                                <option value="2">Petugas</option>
                                 </select>
                                 @error('status')
                                 <div class="form-text">

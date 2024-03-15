@@ -18,15 +18,17 @@ class adminController extends Controller
             'username'=>'required|min:6',
             'password'=>'required|min:4',
             'namalengkap'=>'required',
+            'status'=>'required'
         ]);
         $a = new admin();
         $a->create([
             'email'=>$request->email,
             'username'=>$request->username,
             'password'=>$request->password,
-            'namalengkap'=>$request->namalengkap
+            'namalengkap'=>$request->namalengkap,
+            'status'=>$request->status
         ]);
-        return redirect('admin/reg')->with('info','anda berhasil login');
+        return back()->with('Pesan','Register Behasil');
     }
 
     public function home(){
