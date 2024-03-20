@@ -9,7 +9,7 @@ class adminController extends Controller
 {
 
     public function reg(){
-        return view("admin.reg");
+        return view("reg");
     }
     public function simpan(Request $request){
       
@@ -32,7 +32,7 @@ class adminController extends Controller
     }
 
     public function home(){
-return view("admin/home");
+return view("admin.home");
     }
     public function log(){
         return view("admin/login");
