@@ -34,13 +34,13 @@ class adminController extends Controller
     public function home(){
 return view("admin.home");
     }
-    public function log(){
-        return view("admin/login");
+    public function login(){
+        return view("admin.login");
     }
     public function ceklogin(Request $request){
         $s = new admin();
         if ($s->where ('username', $request->input('username'))->where('password',$request->input('password'))->exists()){
-            return redirect('admin/home');
+            return redirect('home');
         }
     }
 }

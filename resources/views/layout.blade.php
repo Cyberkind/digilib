@@ -17,10 +17,10 @@
       }
     </style>
   <!-- Navbar 1 - Bootstrap Brain Component -->
-<nav class="navbar navbar-expand-md bg- shadow-lg bsb-navbar bsb-navbar-hover bsb-navbar-caret">
+<nav class="navbar navbar-expand-md bg-secondary shadow-lg bsb-navbar bsb-navbar-hover bsb-navbar-caret">
   <div class="container">
     <a class="navbar-brand" href="index.html">
-      <img src="https://cdn.iconscout.com/icon/free/png-512/free-library-9078376-7463572.png?f=webp&w=256" alt="Digital Library" width="50" height="50">
+      <img src="logo.png" alt="Digital Library" width="100" height="100">
     </a>
     <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">

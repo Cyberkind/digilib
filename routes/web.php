@@ -27,7 +27,7 @@ Route::get('l', function () {
 // });
 
 
-    Route::get('login',[adminController::class,'log']);
+    Route::get('login',[adminController::class,'login']);
     Route::post('login',[adminController::class,'ceklogin']);
     Route::get('reg',[adminController::class,'reg']);
     Route::post('reg',[adminController::class,'simpan']);
@@ -37,8 +37,8 @@ Route::get('l', function () {
 Route::get('kategori',[kategoriConntroller::class,'kategori']);
 Route::get('kategori/tambah',[kategoriConntroller::class,'kategori_tambah']);
 Route::post('kategori/tambah',[kategoriConntroller::class,'kategori_kirim']);
-Route::post('kategori/edit/{kategoriid}',[kategoriConntroller::class,'kategori_edited']);
-Route::get('kategori/edit/{kategoriid}',[kategoriConntroller::class,'kategori_edit']);
+Route::post('kategori/edit/{kategoriid}',[kategoriConntroller::class,'kategori_edit']);
+Route::get('kategori/edit/{kategoriid}',[kategoriConntroller::class,'kategori_edited']);
 Route::get('kategori/hapus/{kategoriid}',[kategoriConntroller::class,'kategori_hapus']);
 
 
